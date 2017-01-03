@@ -19,5 +19,5 @@ annc.getAndRender  = function(url){
 }
 
 annc.run = function(){
-  this.getAndRender('.vimrc')
+  this.getAndRender('vimrc')
 }
