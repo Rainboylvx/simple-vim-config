@@ -11,7 +11,7 @@
 syntax enable
 syntax on                       " 开启代码高亮
 set background=dark             " set bg=dark 
-colorscheme industry            " 设定主题
+colorscheme murphy              " 设定主题
 set cmdheight=2                 " 设定cmd的高度
 set number                      " 开启行号
 set relativenumber              " 开启相对行号
