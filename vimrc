@@ -61,6 +61,7 @@ imap <c-h> <esc>I
 "括号自动补全
 inoremap ( ()<esc>i
 inoremap { {}<esc>i
+inoremap [ []<esc>i
 inoremap " ""<esc>i
 inoremap ' ''<esc>i
 
