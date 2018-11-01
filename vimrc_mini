@@ -1,21 +1,39 @@
-colo murphy " 设定主题 通过命令 :colo 空格 tab 可以不停的列出主题
+"==================================== vim 超mini配置 ===================================
+"=== 版本: bate 1.0
+"=== 特点: 小到极致
+"=====================================================================================
 
-set nocp "" set nocompatible "关闭vi 兼容"
-set rnu "set relativenumber    开启相对行号
-set ts=4    "set tabstop=4  设定tab然宽度
-set cul     "set cursorline    高亮当前行
-set aw   "set autowrite                   " 文件一有写入,自动保存
-"====================================== 行为设定 =====================================
-"快捷键
-imap <c-l> <esc>A
-imap <c-h> <esc>I
-"括号自动补全
+" 简化命令          原命令                  作用/说明
+colo murphy         "colorscheme murphy     设定主题/通过命令 :colo 空格 tab 可以不停的列出主题
+set nocp            "set nocompatible       关闭vi 兼容
+set rnu             "set relativenumber     开启相对行号
+set ts=4            "set tabstop=4          设定tab宽度
+set cul             "set cursorline         高亮当前行
+set aw              "set autowrite          文件一有写入,自动保存,最好还是多按 :w
 
-ino ( ()<esc>i
+"===快捷键
+im <c-l> <esc>A     "imap <c-l> <esc>A      ctrl+h 来到行首
+im <c-h> <esc>I     "                       ctrl+l 来到行尾
+"===自动补全
+ino ( ()<esc>i      "inoremap ( ()<esc>i    输入(  自动出现()
 ino { {}<esc>i
 ino [ []<esc>i
 ino " ""<esc>i
 ino ' ''<esc>i
 
-nnoremap <Leader>vr :source $MYVIMRC<CR>
-" ggVG= 自动缩进（格式化）代码
+" 常用命令
+" w  移动到下一单词的开头
+" b  移动到上一单词的开头
+" e  移动到光标所在单词的末尾
+" gg/G 移动到第一行/最后一行
+" zz/zb/zt  拖动屏幕 当前行到中间/最下边/最上边 bottom,top
+" :num 快速来到第num行
+" yy/dd 复制/删除 一行         nyy/dd 多行
+" yl/dl 复制/删除 一个字母     nyl/dl 多个
+" yw/dw 复制/删除 一个单词     nyw/dw 多个
+" p/P 粘到当前光标的前面/后面
+" ggVG= 自动缩进（格式化）所有代码
+" Ctrl-f 向前滚动一页 f=front
+" Ctrl-b 向后滚动一页 b=back
+" Ctrl-u 向前滚动半页 u=up
+" Ctrl-d 向后滚动半页 d=down

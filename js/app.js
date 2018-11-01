@@ -8,7 +8,9 @@ annc.render = function(content){
 
   //$('#content').append("<div>"+str_vim+"</div");
   $('#content').append(str_vim);
+    console.log(str_vim)
   Prism.highlightAll();
+    console.log(Prism)
 }
 
 
@@ -18,6 +20,9 @@ annc.getAndRender  = function(url){
   })
 }
 
-annc.run = function(){
-  this.getAndRender('vimrc')
+annc.run = function(url){
+    if(url)
+        this.getAndRender(url)
+    else
+        this.getAndRender('vimrc')
 }
