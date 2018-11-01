@@ -1,0 +1,21 @@
+colo murphy " 设定主题 通过命令 :colo 空格 tab 可以不停的列出主题
+
+set nocp "" set nocompatible "关闭vi 兼容"
+set rnu "set relativenumber    开启相对行号
+set ts=4    "set tabstop=4  设定tab然宽度
+set cul     "set cursorline    高亮当前行
+set aw   "set autowrite                   " 文件一有写入,自动保存
+"====================================== 行为设定 =====================================
+"快捷键
+imap <c-l> <esc>A
+imap <c-h> <esc>I
+"括号自动补全
+
+ino ( ()<esc>i
+ino { {}<esc>i
+ino [ []<esc>i
+ino " ""<esc>i
+ino ' ''<esc>i
+
+nnoremap <Leader>vr :source $MYVIMRC<CR>
+" ggVG= 自动缩进（格式化）代码
